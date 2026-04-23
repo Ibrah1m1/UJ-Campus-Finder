@@ -1,13 +1,201 @@
-/* UJ Campus Finder — Responsive Styles
-   Team: add your media queries here */
+/* =====================================================
+   UJ Campus Finder — Responsive Styles
+   ===================================================== */
 
-/* ---- Tablet (≤ 768px) ---- */
-@media (max-width: 768px) {
-    /* TODO: stack nav items */
-    /* TODO: adjust card grid to 1 column */
+/* =====================================================
+   TABLET  (≤ 900px)
+   ===================================================== */
+@media (max-width: 900px) {
+
+    /* Stats: 2×2 */
+    .stats__grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.25rem;
+    }
+
+    /* Services: all full-width */
+    .services__grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    .service-card:nth-child(n) {
+        grid-column: span 1;
+    }
+
+    /* Features: 2 columns */
+    .features__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Tips: 1 column */
+    .tips__grid {
+        grid-template-columns: 1fr;
+    }
 }
 
-/* ---- Mobile (≤ 480px) ---- */
+/* =====================================================
+   TABLET NAV  (≤ 768px)
+   ===================================================== */
+@media (max-width: 768px) {
+
+    /* --- Collapsed nav --- */
+    .navbar__toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .navbar__inner {
+        position: relative;
+    }
+
+    .navbar__links {
+        display: none;
+        position: absolute;
+        top: 66px;
+        left: 0;
+        right: 0;
+        background: var(--color-white);
+        flex-direction: column;
+        padding: 0.75rem 1rem 1rem;
+        box-shadow: 0 8px 24px rgba(0, 71, 49, 0.1);
+        border-top: 1px solid var(--color-border);
+        gap: 0.15rem;
+        z-index: 300;
+    }
+
+    .navbar__links.open {
+        display: flex;
+    }
+
+    .navbar__links li a {
+        display: block;
+        padding: 0.6rem 1rem;
+        font-size: 0.95rem;
+    }
+
+    /* --- Hero --- */
+    .hero {
+        padding: 4rem 1.25rem 5rem;
+    }
+
+    .hero__title {
+        font-size: 2.15rem;
+    }
+
+    .hero__subtitle {
+        font-size: 1rem;
+    }
+
+    /* --- How It Works: vertical stack --- */
+    .steps {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+        max-width: 420px;
+    }
+
+    .step {
+        padding: 0;
+        width: 100%;
+    }
+
+    .step__connector {
+        width: 2px;
+        height: 28px;
+        flex: 0 0 28px;
+        margin-top: 0;
+        margin-left: calc(50% - 1px);
+    }
+
+    /* --- Section titles --- */
+    .section__title {
+        font-size: 1.7rem;
+    }
+
+    /* --- CTA --- */
+    .cta__title {
+        font-size: 1.8rem;
+    }
+}
+
+/* =====================================================
+   MOBILE  (≤ 480px)
+   ===================================================== */
 @media (max-width: 480px) {
-    /* TODO: further adjustments for small screens */
+
+    /* Hero */
+    .hero {
+        padding: 3.5rem 1rem 4rem;
+    }
+
+    .hero__title {
+        font-size: 1.75rem;
+        letter-spacing: -0.01em;
+    }
+
+    .hero__subtitle {
+        font-size: 0.9rem;
+    }
+
+    .hero__badge {
+        font-size: 0.68rem;
+    }
+
+    .hero__actions {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero__actions .btn {
+        width: 100%;
+        justify-content: center;
+        max-width: 280px;
+    }
+
+    /* Stats: tighter */
+    .stats__grid {
+        gap: 1rem;
+    }
+
+    .stat__number {
+        font-size: 2rem;
+    }
+
+    /* Features: single column */
+    .features__grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Section headings */
+    .section__title {
+        font-size: 1.5rem;
+    }
+
+    /* Buttons */
+    .btn {
+        padding: 0.65rem 1.35rem;
+        font-size: 0.875rem;
+    }
+
+    /* CTA */
+    .cta__title {
+        font-size: 1.55rem;
+    }
+
+    .cta__actions {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cta__actions .btn {
+        width: 100%;
+        justify-content: center;
+        max-width: 280px;
+    }
+
+    /* Container padding */
+    .container {
+        padding: 0 1rem;
+    }
 }

@@ -4,28 +4,288 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - UJ Campus Finder</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/responsive.css">
 </head>
 <body>
 
-    <header>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="reports.html">Reports</a>
-            <a href="claim.html">Claim</a>
-            <a href="contact-us.html">Contact</a>
-            <a href="about-us.html">About</a>
-        </nav>
+    <!-- ===== NAVIGATION ===== -->
+    <header class="navbar">
+        <div class="navbar__inner">
+            <a href="index.html" class="navbar__brand">
+                <i class="fa-solid fa-location-crosshairs"></i>
+                <span>UJ Campus Finder</span>
+            </a>
+            <ul class="navbar__links" id="navLinks">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="reports.html">Reports</a></li>
+                <li><a href="claim.html">Claim</a></li>
+                <li><a href="contact-us.html">Contact</a></li>
+                <li><a href="about-us.html">About</a></li>
+            </ul>
+            <button class="navbar__toggle" id="navToggle" aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
     </header>
 
     <main>
-        <!-- TODO: Hero section — brief intro and call-to-action buttons -->
-        <!-- TODO: Quick links to Report Lost / Report Found / Browse Reports -->
+
+        <!-- ===== HERO ===== -->
+        <section class="hero">
+            <div class="hero__inner">
+                <span class="hero__badge">
+                    <i class="fa-solid fa-leaf"></i>
+                    University of Jeddah &mdash; Campus Services
+                </span>
+                <h1 class="hero__title">Lost Something on Campus?<br>We Can Help.</h1>
+                <p class="hero__subtitle">
+                    UJ Campus Finder helps students report, find, and claim lost items
+                    across the University of Jeddah campus — quickly and easily.
+                </p>
+                <div class="hero__actions">
+                    <a href="reports.html" class="btn btn--amber">
+                        <i class="fa-solid fa-list-ul"></i> Browse Reports
+                    </a>
+                    <a href="reports.html" class="btn btn--outline-white">
+                        <i class="fa-solid fa-pen-to-square"></i> Submit a Report
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== STATS ===== -->
+        <section class="stats">
+            <div class="container">
+                <div class="stats__grid">
+                    <div class="stat">
+                        <div class="stat__number">1,240+</div>
+                        <div class="stat__label">Reports Submitted</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat__number">870+</div>
+                        <div class="stat__label">Items Returned</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat__number">15</div>
+                        <div class="stat__label">Campus Locations</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat__number">3,500+</div>
+                        <div class="stat__label">Students Helped</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SERVICES ===== -->
+        <section class="services">
+            <div class="container">
+                <div class="section__header">
+                    <span class="section__label">What We Offer</span>
+                    <h2 class="section__title">Everything You Need in One Place</h2>
+                    <p class="section__desc">Browse our services to report lost items, submit found item reports, or claim what's yours.</p>
+                </div>
+                <div class="services__grid">
+                    <a href="reports.html" class="service-card">
+                        <div class="service-card__icon">
+                            <i class="fa-solid fa-clipboard-list"></i>
+                        </div>
+                        <h3 class="service-card__title">Report Lost Item</h3>
+                        <p class="service-card__desc">Tell us what you've lost, where you last saw it, and how to reach you.</p>
+                        <span class="service-card__link">Get started <i class="fa-solid fa-arrow-right"></i></span>
+                    </a>
+                    <a href="reports.html" class="service-card">
+                        <div class="service-card__icon">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </div>
+                        <h3 class="service-card__title">Report Found Item</h3>
+                        <p class="service-card__desc">Found something on campus? Submit a report so we can help return it to its owner.</p>
+                        <span class="service-card__link">Get started <i class="fa-solid fa-arrow-right"></i></span>
+                    </a>
+                    <a href="reports.html" class="service-card">
+                        <div class="service-card__icon">
+                            <i class="fa-solid fa-list-ul"></i>
+                        </div>
+                        <h3 class="service-card__title">Browse Reports</h3>
+                        <p class="service-card__desc">Search and filter all open lost and found reports across the campus.</p>
+                        <span class="service-card__link">View all <i class="fa-solid fa-arrow-right"></i></span>
+                    </a>
+                    <a href="claim.html" class="service-card">
+                        <div class="service-card__icon">
+                            <i class="fa-solid fa-hand"></i>
+                        </div>
+                        <h3 class="service-card__title">Claim an Item</h3>
+                        <p class="service-card__desc">Think you found your item? Submit a formal claim request with supporting details.</p>
+                        <span class="service-card__link">Claim now <i class="fa-solid fa-arrow-right"></i></span>
+                    </a>
+                    <a href="contact-us.html" class="service-card">
+                        <div class="service-card__icon">
+                            <i class="fa-solid fa-headset"></i>
+                        </div>
+                        <h3 class="service-card__title">Get Help</h3>
+                        <p class="service-card__desc">Need assistance? Contact our support team directly from any page on the site.</p>
+                        <span class="service-card__link">Contact us <i class="fa-solid fa-arrow-right"></i></span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== HOW IT WORKS ===== -->
+        <section class="how-it-works">
+            <div class="container">
+                <div class="section__header">
+                    <span class="section__label">Simple Process</span>
+                    <h2 class="section__title">How It Works</h2>
+                    <p class="section__desc">Three easy steps to recover your lost item or help someone else find theirs.</p>
+                </div>
+                <div class="steps">
+                    <div class="step">
+                        <div class="step__number">1</div>
+                        <h3 class="step__title">Submit a Report</h3>
+                        <p class="step__desc">Fill in the item details, the last known location, and your contact information so others can reach you.</p>
+                    </div>
+                    <div class="step__connector" aria-hidden="true"></div>
+                    <div class="step">
+                        <div class="step__number">2</div>
+                        <h3 class="step__title">Browse &amp; Match</h3>
+                        <p class="step__desc">Search open reports, apply filters by category and location, and find a match for your item.</p>
+                    </div>
+                    <div class="step__connector" aria-hidden="true"></div>
+                    <div class="step">
+                        <div class="step__number">3</div>
+                        <h3 class="step__title">Resolve &amp; Close</h3>
+                        <p class="step__desc">Submit a claim request and complete the handoff with the other student to mark the report resolved.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== FEATURE HIGHLIGHTS ===== -->
+        <section class="features">
+            <div class="container">
+                <div class="section__header">
+                    <span class="section__label">Built for UJ Students</span>
+                    <h2 class="section__title">Platform Highlights</h2>
+                    <p class="section__desc">Practical features designed to make the process fast, clear, and reliable for every student.</p>
+                </div>
+                <div class="features__grid">
+                    <div class="feature-item">
+                        <div class="feature-item__icon">
+                            <i class="fa-solid fa-sliders"></i>
+                        </div>
+                        <div class="feature-item__content">
+                            <h4 class="feature-item__title">Smart Filtering</h4>
+                            <p class="feature-item__desc">Filter reports by category, date range, and campus location to narrow down your search.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-item__icon">
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
+                        <div class="feature-item__content">
+                            <h4 class="feature-item__title">Claim Requests</h4>
+                            <p class="feature-item__desc">A formal claim process ensures items are returned to the right person safely.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-item__icon">
+                            <i class="fa-solid fa-chart-line"></i>
+                        </div>
+                        <div class="feature-item__content">
+                            <h4 class="feature-item__title">Status Tracking</h4>
+                            <p class="feature-item__desc">Know at a glance whether a report is open, claimed, or already resolved.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-item__icon">
+                            <i class="fa-solid fa-earth-americas"></i>
+                        </div>
+                        <div class="feature-item__content">
+                            <h4 class="feature-item__title">Multi-language Ready</h4>
+                            <p class="feature-item__desc">Built to support both Arabic and English for all UJ students.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-item__icon">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <div class="feature-item__content">
+                            <h4 class="feature-item__title">Contact &amp; Support</h4>
+                            <p class="feature-item__desc">Reach the support team directly through the built-in contact form on any page.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-item__icon">
+                            <i class="fa-solid fa-user-graduate"></i>
+                        </div>
+                        <div class="feature-item__content">
+                            <h4 class="feature-item__title">Student-Built</h4>
+                            <p class="feature-item__desc">Designed and developed by UJ students, for UJ students.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== CAMPUS TIPS ===== -->
+        <section class="tips">
+            <div class="container">
+                <div class="section__header">
+                    <span class="section__label">Helpful Advice</span>
+                    <h2 class="section__title">Campus Tips</h2>
+                    <p class="section__desc">Quick tips to increase your chances of recovering a lost item.</p>
+                </div>
+                <div class="tips__grid">
+                    <div class="tip-card">
+                        <div class="tip-card__number">Tip 01</div>
+                        <h3 class="tip-card__title">Report Immediately</h3>
+                        <p class="tip-card__desc">The sooner you submit a report, the higher the chance someone has already found your item and filed a matching report.</p>
+                    </div>
+                    <div class="tip-card">
+                        <div class="tip-card__number">Tip 02</div>
+                        <h3 class="tip-card__title">Be Specific</h3>
+                        <p class="tip-card__desc">Include as much detail as possible: color, brand, model number, and the exact location where you last had the item.</p>
+                    </div>
+                    <div class="tip-card">
+                        <div class="tip-card__number">Tip 03</div>
+                        <h3 class="tip-card__title">Check Regularly</h3>
+                        <p class="tip-card__desc">New reports are added every day. Return to the Reports page often to see if someone filed a matching found report.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== FINAL CTA ===== -->
+        <section class="cta">
+            <div class="cta__inner">
+                <h2 class="cta__title">Still Need Help?</h2>
+                <p class="cta__desc">
+                    Our support team is here to assist you with any lost or found item
+                    inquiry across the University of Jeddah campus.
+                </p>
+                <div class="cta__actions">
+                    <a href="contact-us.html" class="btn btn--white">
+                        <i class="fa-solid fa-envelope"></i> Contact Us
+                    </a>
+                    <a href="reports.html" class="btn btn--outline-white">
+                        <i class="fa-solid fa-list-ul"></i> Browse Reports
+                    </a>
+                </div>
+            </div>
+        </section>
+
     </main>
 
-    <footer>
-        <!-- TODO: Footer content -->
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 UJ Campus Finder &mdash; University of Jeddah. All rights reserved.</p>
+        </div>
     </footer>
 
     <script src="/js/main.js"></script>
